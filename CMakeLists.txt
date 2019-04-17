@@ -36,9 +36,15 @@
 #
 cmake_minimum_required(VERSION 3.3)
 
+include(cmake/HunterGate.cmake)
+HunterGate(
+        URL "https://github.com/ruslo/hunter/archive/v0.23.89.tar.gz"
+        SHA1 "a370290a8b32987755a36d64807bf8c7f5b61730"
+)
+
 project(uriparser
     VERSION
-        1.24.0
+        0.9.1
 )
 
 # See https://www.gnu.org/software/libtool/manual/html_node/Updating-version-info.html
@@ -241,6 +247,7 @@ endif()
 if(URIPARSER_BUILD_TESTS)
     enable_testing()
 
+    hunter_add_package(GTest)
     find_package(GTest 1.8.1 REQUIRED)
 
     add_executable(testrunner
