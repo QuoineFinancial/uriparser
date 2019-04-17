@@ -38,7 +38,7 @@ cmake_minimum_required(VERSION 3.3)
 
 project(uriparser
     VERSION
-        0.9.1
+        1.24.0
 )
 
 # See https://www.gnu.org/software/libtool/manual/html_node/Updating-version-info.html
@@ -362,13 +362,13 @@ install(
         ${CMAKE_CURRENT_BINARY_DIR}/cmake/uriparser-config.cmake
         ${CMAKE_CURRENT_BINARY_DIR}/cmake/uriparser-config-version.cmake
     DESTINATION
-        ${CMAKE_INSTALL_LIBDIR}/cmake/uriparser-${PROJECT_VERSION}/
+        ${CMAKE_INSTALL_LIBDIR}/cmake/uriparser
 )
 install(
     EXPORT
         uriparser
     DESTINATION
-        ${CMAKE_INSTALL_LIBDIR}/cmake/uriparser-${PROJECT_VERSION}/
+        ${CMAKE_INSTALL_LIBDIR}/cmake/uriparser
     NAMESPACE
         uriparser::
 )
